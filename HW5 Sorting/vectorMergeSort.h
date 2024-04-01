@@ -9,8 +9,8 @@ template<class ItemType>
 class vectorMergeSort : public SortInterface<ItemType>
 {
 private:
-	int number_of_comparisons;
-	int number_of_swaps;
+	double number_of_comparisons;
+	double number_of_swaps;
 	double run_time;
 public:
 	vectorMergeSort() //init variables in constructor

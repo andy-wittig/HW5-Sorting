@@ -9,8 +9,8 @@ template<class ItemType>
 class vectorInsertionSort : public SortInterface<ItemType>
 {
 private:
-	int number_of_comparisons;
-	int number_of_swaps;
+	double number_of_comparisons;
+	double number_of_swaps;
 	double run_time;
 public:
 	vectorInsertionSort() //init variables in constructor
@@ -26,7 +26,7 @@ public:
 		for (int i = 1; i < data.size(); i++)
 		{
 			int j = i - 1;
-			int key = data[i];
+			ItemType key = data[i];
 
 			while (j >= 0 && data[j] > key)
 			{

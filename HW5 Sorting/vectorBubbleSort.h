@@ -9,8 +9,8 @@ template<class ItemType>
 class vectorBubbleSort : public SortInterface<ItemType>
 {
 private:
-	int number_of_comparisons;
-	int number_of_swaps;
+	double number_of_comparisons;
+	double number_of_swaps;
 	double run_time;
 public:
 	vectorBubbleSort() //init variables in constructor
@@ -25,7 +25,7 @@ public:
 		clock_t start_time = clock();
 		for (int i = 0; i < data.size() - 1; i++)
 		{
-			for (int j = 0; j < data.size() - 1; j++) //this one pass-through will bring the largest value to the top
+			for (int j = 0; j < data.size() - i - 1; j++) //this one pass-through will bring the largest value to the top
 			{
 				if (data[j] > data[j + 1]) //swap elements
 				{

@@ -86,6 +86,8 @@ void sortVector(SortInterface<int>& sorter_type, vector<int>& vect, int size, in
 	double avg_swaps = 0;
 	double avg_runtime = 0;
 
+	cout << "Runtime, Comparisons, Swaps:" << endl;
+
 	for (int i = 0; i < times_sorted; i++) 
 	{
 		generateRandVect(vect, size);
@@ -95,11 +97,11 @@ void sortVector(SortInterface<int>& sorter_type, vector<int>& vect, int size, in
 		avg_comps += sorter_type.getComparisons();
 		avg_swaps += sorter_type.getSwaps();
 		avg_runtime += sorter_type.getRuntime();
-
-		cout << "Sort run: " << i + 1 << ", ";
-		cout << "Comparisons: " << sorter_type.getComparisons() << ", ";
-		cout << "Swaps: " << sorter_type.getSwaps() << ", ";
-		cout << "Runtime: " << sorter_type.getRuntime() << endl;
+		
+		cout << sorter_type.getRuntime() << " ";
+		cout << sorter_type.getComparisons() << " ";
+		cout << sorter_type.getSwaps() << endl;
+		
 	}
 
 	avg_comps = avg_comps / times_sorted;
