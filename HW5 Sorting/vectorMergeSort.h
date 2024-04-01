@@ -83,9 +83,9 @@ public:
 		run_time = double(end_time - start_time);
 	}
 
-	int getComparisons() { return number_of_comparisons; }
+	double getComparisons() { return number_of_comparisons; }
 
-	int getSwaps() { return number_of_swaps; }
+	double getSwaps() { return number_of_swaps; }
 
 	double getRuntime() { return run_time; }
 

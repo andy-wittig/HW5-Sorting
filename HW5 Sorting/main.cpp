@@ -82,9 +82,9 @@ int getMenuChoice() {
 
 void sortVector(SortInterface<int>& sorter_type, vector<int>& vect, int size, int times_sorted)
 {
-	double avg_comps = 0;
-	double avg_swaps = 0;
-	double avg_runtime = 0;
+	double avg_comps = 0.0;
+	double avg_swaps = 0.0;
+	double avg_runtime = 0.0;
 
 	cout << "Runtime, Comparisons, Swaps:" << endl;
 
